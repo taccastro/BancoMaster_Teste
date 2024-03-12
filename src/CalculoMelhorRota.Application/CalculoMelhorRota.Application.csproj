@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CalculoMelhorRota.CrossCutting.Util\CalculoMelhorRota.CrossCutting.Util.csproj" />
+    <ProjectReference Include="..\CalculoMelhorRota.Domain\CalculoMelhorRota.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.32" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.32" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.32" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CalculoMelhorRota.Application\CalculoMelhorRota.Application.csproj" />
+    <ProjectReference Include="..\CalculoMelhorRota.Domain\CalculoMelhorRota.Domain.csproj" />
+    <ProjectReference Include="..\CalculoMelhorRota.Infra.Data\CalculoMelhorRota.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>

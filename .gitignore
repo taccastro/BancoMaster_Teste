@@ -1,0 +1,17 @@
+src/CalculoMelhorRota/bin
+src/CalculoMelhorRota/obj
+src/CalculoMelhorRota.Application/bin
+src/CalculoMelhorRota.Application/obj
+src/CalculoMelhorRota.CrossCutting.IOC/bin
+src/CalculoMelhorRota.CrossCutting.IOC/obj
+src/CalculoMelhorRota.CrossCutting.Util/bin
+src/CalculoMelhorRota.CrossCutting.Util/obj
+src/CalculoMelhorRota.Domain/bin
+src/CalculoMelhorRota.Domain/obj
+src/CalculoMelhorRota.Infra.Data/bin
+src/CalculoMelhorRota.Infra.Data/obj
+src/CalculoMelhorRotaConsole/bin
+src/CalculoMelhorRotaConsole/obj
+src/CalculoMelhorRota.Domain.Tests/bin
+src/CalculoMelhorRota.Domain.Tests/obj
+.vs

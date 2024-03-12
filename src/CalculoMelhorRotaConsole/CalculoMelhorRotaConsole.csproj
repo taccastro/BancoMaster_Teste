@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <Target Name="Copia_CSV" AfterTargets="Build">
+    <Message Text="Copia CSV" Importance="High" />
+    <Copy SourceFiles="$(ProjectDir)\rotas.csv" DestinationFolder="$(OutDir)" />
+  </Target>
+  <Target Name="CopyYourFolderAfterPublish" AfterTargets="Publish">
+    <Message Text="Copia CSV" Importance="High" />
+    <Copy SourceFiles="$(ProjectDir)\rotas.csv" DestinationFolder="$(PublishDir)" />
+  </Target>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.32" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.32" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.32" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.32" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.32" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.32" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CalculoMelhorRota.CrossCutting.IOC\CalculoMelhorRota.CrossCutting.IOC.csproj" />
+  </ItemGroup>
+</Project>
